@@ -1,0 +1,9 @@
+$couleur-fond: #F2F2F2;
+$couleur-text-principal : #59544A;
+$couleur-text-secondaire : #8C8C8C;
+
+@mixin displayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

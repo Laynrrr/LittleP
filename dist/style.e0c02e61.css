@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+.mouse-follower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  background-color: #A69886;
+  opacity: 0.5;
+  border-radius: 100%;
+  transition: 0.1s;
+  z-index: -1;
+}
+
+body {
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+nav {
+  position: relative;
+  padding: 20px, 0;
+  height: 100px;
+  margin-bottom: 50px;
+}
+nav .logo {
+  position: absolute;
+  color: #59544A;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .principal a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  font-size: 2rem;
+  color: #59544A;
+}
+
+#sec-2 {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 100%;
+  gap: 10px;
+}
+#sec-2 .intro:nth-child(1) h1 {
+  font-size: 5rem;
+  color: #59544A;
+  margin-bottom: 30px;
+}
+#sec-2 .intro:nth-child(1) h3 {
+  font-size: 2rem;
+  color: #8C8C8C;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+#sec-2 .intro:nth-child(1) span {
+  border-bottom: 2px solid #59544A;
+}
+#sec-2 .intro:nth-child(2) {
+  text-align: right;
+  position: relative;
+  z-index: -2;
+}
+#sec-2 .intro:nth-child(2) img {
+  width: 450px;
+}
+
+@media screen and (max-width: 1200px) {
+  #sec-2 .intro:nth-child(1) h1 {
+    font-size: 4rem;
+  }
+
+  #sec-2 .intro:nth-child(1) h3 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  #sec-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #sec-2 .intro:nth-child(1) h1 {
+    font-size: 5rem;
+  }
+
+  #sec-2 .intro:nth-child(1) h3 {
+    font-size: 2rem;
+  }
+
+  #sec-2 .intro:nth-child(2) {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+/*# sourceMappingURL=/style.e0c02e61.css.map */
