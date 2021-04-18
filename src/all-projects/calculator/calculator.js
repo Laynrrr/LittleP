@@ -1,11 +1,9 @@
-// mouse-cursor
-document.body.addEventListener('mousemove', (e) => {
-    let target = document.querySelector('.mouse-follower')
-    target.style.left = e.clientX + 'px'
-    target.style.top = e.clientY + 'px'
-})
+let input=""
 
-// all projects menu
+
+
+// ALL PROJECTS MENU
+
 const menu = document.querySelector('.all-projects')
 const allProjectsMenu = document.getElementById('all-projects-menu')
 const allProjectsMenu2 = document.getElementById('all-projects-menu-2')

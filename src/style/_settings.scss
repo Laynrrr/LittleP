@@ -1,9 +1,92 @@
 $couleur-fond: #F2F2F2;
 $couleur-text-principal : #59544A;
 $couleur-text-secondaire : #8C8C8C;
+$couleur-text-menu : #8C8C8C;
 
 @mixin displayFlex {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin reset{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin menu{
+    #all-projects-menu{
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #8C8C8C;
+        z-index: 1000;
+        transition: 2s;
+        border-radius: 10000px;
+    }
+    
+    #all-projects-menu.active{
+        width: 5000px;
+        height: 5000px;
+    }
+    
+    #all-projects-menu-2{
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #F2F2F2;
+        z-index: 10000;
+        transition: 2.5s;
+        border-radius: 10000px;
+    }
+    
+    #all-projects-menu-2.active{
+        width: 5001px;
+        height: 5001px;
+    }
+    
+    .container-menu{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 10001;
+        display: none;
+        overflow: hidden;
+    
+        .container-menu-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+    
+            button{
+                position: absolute;
+                left: 50%;
+                top: 8%;
+                transform: translate(-50%, -50%);
+                text-decoration: none;
+                font-size: 2rem;
+                color: $couleur-text-menu;
+                background-color: transparent;
+                cursor: pointer;
+                outline: none;
+                border: none;
+            }
+    
+            a{
+                text-decoration: none;
+                font-size: 2rem;
+                color: $couleur-text-menu;
+            }
+        }
+    }
 }
